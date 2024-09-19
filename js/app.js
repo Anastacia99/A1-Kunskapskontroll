@@ -4,14 +4,18 @@ let button0 = document.getElementById("button0");
 
 // Text
 let playerRollText = document.getElementById("playerRollText");
+let aiRollText = document.getElementById("aiRollText");
+let
 
 // Data
 let playerRoll = 0;
+let aiRoll = 0;
 
 //PROCESS
 button0.addEventListener("click", function() {
   getRandomNumberOneToSixForPlayer ();
   showPlayerRollResult ();
+  showAiRollResult
 })
 
 // CONTROLLERS
