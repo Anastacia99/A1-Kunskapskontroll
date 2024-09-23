@@ -5,7 +5,7 @@ let button0 = document.getElementById("button0");
 // Text
 let playerRollText = document.getElementById("playerRollText");
 let aiRollText = document.getElementById("aiRollText");
-let resultText = document.getElementById("result");
+let resultText = document.getElementById("Result");
 let playerScoreText = document.getElementById("playerScoreText");
 let aiScoreText = document.getElementById("aiScoreText");
 
@@ -40,7 +40,7 @@ function evaluateResult() {
     resultText.innerHTML = "Player wins!";
     playerScore++;
   } else if (aiRoll > playerRoll) {
-    resultText.innerHTML = "Ai Wins!";
+    resultText.innerHTML = "AI Wins!";
     aiScore++;
   } else {
     resultText.innerHTML = "It's a draw!";
@@ -59,7 +59,7 @@ function showPlayerScore() {
     playerScoreText.innerHTML = "Player Score: " + playerScore;
 }
 function showAiScore() {
-  aiScoreText.innerHTML = "Ai Score: " + aiScore;
+  aiScoreText.innerHTML = "AI Score: " + aiScore;
 }
 
 
