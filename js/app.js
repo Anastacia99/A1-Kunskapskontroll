@@ -5,7 +5,7 @@ let button0 = document.getElementById("button0");
 // Text
 let playerRollText = document.getElementById("playerRollText");
 let aiRollText = document.getElementById("aiRollText");
-let result = document.getElementById("result");
+let resultText = document.getElementById("result");
 let playerScoreText = document.getElementById("playerScoreText");
 let aiScoreText = document.getElementById("aiScoreText");
 
@@ -20,10 +20,10 @@ let aiScore = 0;
 //PROCESS
 button0.addEventListener("click", function() {
   getRandomNumberOneToSixForPlayer ();
-  showPlayerRollResult();
   getRandomNumberOneToSixForAi();
-  showAiRollResult();
   evaluateResult();
+  showPlayerRollResult();
+  showAiRollResult();
   showPlayerScore();
   showAiScore();
 });
@@ -37,24 +37,23 @@ function getRandomNumberOneToSixForAi() {
 }
 function evaluateResult() {
   if (playerRoll > aiRoll) {
-    result.innerHTML = "Player wins!"
+    resultText.innerHTML = "Player wins!";
     playerScore++;
-  }
-  else if (aiRoll > playerRoll) {
-    result.innerHTML = "Ai Wins!"
+  } else if (aiRoll > playerRoll) {
+    resultText.innerHTML = "Ai Wins!";
     aiScore++;
-}
-  else {
-
+  } else {
+    resultText.innerHTML = "It's a draw!";
   }
+}
 
 // VIEWS
 function showPlayerRollResult() {
-  playerRollText.innerHTML = playerRoll;
+  playerRollText.innerHTML = "Player result: " + playerRoll;
 }
 
 function showAiRollResult() {
-  aiRollText.innerHTML = aiRoll;
+  aiRollText.innerHTML = "AI result: " + aiRoll;
 }
 function showPlayerScore() {
     playerScoreText.innerHTML = "Player Score: " + playerScore;
@@ -62,6 +61,8 @@ function showPlayerScore() {
 function showAiScore() {
   aiScoreText.innerHTML = "Ai Score: " + aiScore;
 }
+
+
 
 
 
