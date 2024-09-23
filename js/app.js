@@ -56,7 +56,7 @@ function showAiRollResult() {
   aiRollText.innerHTML = "AI result: " + aiRoll;
 }
 function showPlayerScore() {
-    playerScoreText.innerHTML = "Player Score: " + playerScore;
+  playerScoreText.innerHTML = "Player Score: " + playerScore;
 }
 function showAiScore() {
   aiScoreText.innerHTML = "AI Score: " + aiScore;
